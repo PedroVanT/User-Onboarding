@@ -40,7 +40,7 @@ const Form = (props) => {
           <input
             value={true}
             name="terms"
-            type="radio"
+            type="checkbox"
             onChange={change}
             checked={values.terms === "true"}
           />

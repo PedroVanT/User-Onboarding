@@ -35,9 +35,6 @@ function App() {
     axios
       .get("https://reqres.in/api/users")
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
-        console.log(res.data.data);
         setUsers(res.data.data);
       })
       .catch((err) => {
@@ -62,10 +59,7 @@ function App() {
   const inputChange = (event) => {
     const { name } = event.target;
     const { value } = event.target;
-    console.log(event);
-    console.log(event.target);
-    console.log(name);
-    console.log(value);
+
     yup
       .reach(schema, name) // get to this part of the scheme
       .validate(value) // validate this value
@@ -120,3 +114,4 @@ function App() {
 }
 
 export default App;
+// <pre>{JSON.stringify(post, null, 2)}</pre>
